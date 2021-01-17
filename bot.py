@@ -23,6 +23,5 @@ bot = MyBot(command_prefix=commands.when_mentioned_or("!"),
 
 bot.add_cog(Music(bot))
 bot.add_cog(Utils(bot))
-bot.add_cog(Rules(bot))
 
 bot.run(TOKEN)

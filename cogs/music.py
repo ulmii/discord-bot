@@ -168,7 +168,6 @@ class Music(commands.Cog):
     async def ensure_voice(self, ctx: commands.Context):
         if ctx.voice_client is None:
             if ctx.author.voice:
-                ctx.voice_state = self.get_voice_state(ctx)
                 ctx.voice_state.voice = await ctx.author.voice.channel.connect()
             else:
                 await ctx.send("You are not connected to a voice channel.")
